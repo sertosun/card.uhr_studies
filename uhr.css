@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif   ;
+}
+
+.uhr_container {
+    display: flex;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(25em, 1fr)); Zweite Möglichkeit für responsive Cards*/
+}
+
+.uhr_container > * {
+    flex: 1 0 22em;
+}
+
+.uhr_card {
+    border: 1px solid black;
+    background-color: rgb(238, 238, 238);
+    transition: all 300ms;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8em;
+}
+
+.uhr_card:hover {
+    background-color: rgb(184, 184, 184);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4em 1em;
+}
+
+.top p {
+    background-color: black;
+    color: white;
+    padding:  0.2em 0.5em;
+}
+
+.top i {
+    font-size: 1.3em;
+}
+
+.top i:hover {
+    color: red;
+}
+
+.bg_img {
+    height: 20em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 200ms;
+}
+
+.content {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.content > * {
+    margin-bottom: 0.6em;
+}
+
+.title {
+    font-size: 1.5em;
+}
+
+.buy {
+    text-align: center;
+    margin-bottom: 0.6em;
+}
+
+.buy a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    text-transform: uppercase;
+    opacity: 0; /* bessere alternative zu display:none */
+    transition: all 200ms;
+}
+
+.uhr_card:hover .buy a {
+    opacity: 1;
+}
+
+.uhr_card .buy a:hover {
+    transform: scale(1.05);
+}
+
+
+
+.heart {
+    background-image: url("https://www.rado.com/media/catalog/product/r/g/rgb_cat_truesquare_734_6073_3_070_1.png?im=Resize=(700,700),aspect=fit;Crop=(0,0,700,700),gravity=Center,allowExpansion");
+}
+
+.reserve {
+    background-image: url("https://www.rado.com/media/catalog/product/r/g/rgb_cat_coupole_772_3878_4_016.png?im=Resize=(700,700),aspect=fit;Crop=(0,0,700,700),gravity=Center,allowExpansion");
+}
+
+.rado {
+    background-image: url("https://www.rado.com/media/catalog/product/r/g/rgb_cat_coupole_772_3879_2_121.png?im=Resize=(700,700),aspect=fit;Crop=(0,0,700,700),gravity=Center,allowExpansion");
+}
+
+.abyss {
+    background-image: url("https://www.rado.com/media/catalog/product/r/g/rgb_cat_truesquare_763_6070_3_020.png?im=Resize=(700,700),aspect=fit;Crop=(0,0,700,700),gravity=Center,allowExpansion");
+}
+
+.heart:hover , .reserve:hover , .rado:hover , 
+.abyss:hover{
+    transform: scale(1.08);
+}
